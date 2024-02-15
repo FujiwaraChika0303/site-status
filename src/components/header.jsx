@@ -17,11 +17,11 @@ const Header = observer(({ getSiteData }) => {
 
   // 状态文本
   const statusNames = {
-    loading: "站点状态加载中",
-    error: "部分站点出现异常",
-    allError: "全部站点出现异常",
-    normal: "所有站点运行正常",
-    wrong: "数据请求失败",
+    loading: "Yukinoshita站点状态加载中",
+    error: "Yukinoshita部分站点出现异常",
+    allError: "Yukinoshita全部站点出现异常",
+    normal: "Yukinoshita所有站点运行正常",
+    wrong: "数据请求失败，可能是因为您开启了代理软件(VPN)所致，可关闭重试",
   };
 
   // 刷新状态
@@ -31,7 +31,7 @@ const Header = observer(({ getSiteData }) => {
       messageApi.open({
         key: "updata",
         type: "warning",
-        content: "请稍后再尝试刷新",
+        content: "你先别急",
       });
       return false;
     }
@@ -110,7 +110,7 @@ const Header = observer(({ getSiteData }) => {
                   </div>
                   <div className="status-num">
                     <div className="ok-count">
-                      <span className="name">正常</span>
+                      <span className="name">在跑的</span>
                       <CountUp
                         className="num"
                         end={status.siteOverview.okCount}
@@ -118,7 +118,7 @@ const Header = observer(({ getSiteData }) => {
                       />
                     </div>
                     <div className="down-count">
-                      <span className="name">异常</span>
+                      <span className="name">有问题的</span>
                       <span className="num">
                         <CountUp
                           className="num"
@@ -129,7 +129,7 @@ const Header = observer(({ getSiteData }) => {
                     </div>
                     {status.siteOverview?.unknownCount ? (
                       <div className="unknownCount-count">
-                        <span className="name">未知</span>
+                        <span className="name">大概是似了的</span>
                         <span className="num">
                           <CountUp
                             className="num"
