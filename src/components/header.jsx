@@ -18,9 +18,9 @@ const Header = observer(({ getSiteData }) => {
   // 状态文本
   const statusNames = {
     loading: "Yukinoshita站点状态加载中",
-    error: "Yukinoshita部分站点出现异常",
-    allError: "Yukinoshita全部站点出现异常",
-    normal: "Yukinoshita所有站点运行正常",
+    error: "Yukino部分站点出现异常",
+    allError: "Yukino全部站点出现异常",
+    normal: "Yukino所有站点运行正常",
     wrong: "数据请求失败，可能是因为您开启了代理软件(VPN)所致，可关闭重试",
   };
 
