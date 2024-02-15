@@ -17,7 +17,7 @@ const Header = observer(({ getSiteData }) => {
 
   // 状态文本
   const statusNames = {
-    loading: "Yukinoshita站点状态加载中",
+    loading: "正在从主站服务器拉取状态信息",
     error: "Yukino部分站点出现异常",
     allError: "Yukino全部站点出现异常",
     normal: "Yukino所有站点运行正常",
