@@ -110,7 +110,7 @@ const Header = observer(({ getSiteData }) => {
                   </div>
                   <div className="status-num">
                     <div className="ok-count">
-                      <span className="name">在跑的</span>
+                      <span className="name">在跑</span>
                       <CountUp
                         className="num"
                         end={status.siteOverview.okCount}
@@ -118,7 +118,7 @@ const Header = observer(({ getSiteData }) => {
                       />
                     </div>
                     <div className="down-count">
-                      <span className="name">有问题的</span>
+                      <span className="name">病了</span>
                       <span className="num">
                         <CountUp
                           className="num"
@@ -129,7 +129,7 @@ const Header = observer(({ getSiteData }) => {
                     </div>
                     {status.siteOverview?.unknownCount ? (
                       <div className="unknownCount-count">
-                        <span className="name">大概是似了的</span>
+                        <span className="name">似了</span>
                         <span className="num">
                           <CountUp
                             className="num"
